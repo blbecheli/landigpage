@@ -1,0 +1,221 @@
+@use 'variables'
+@use 'components'
+    
+//header
+header
+    background-image: linear-gradient(180deg, transparent, rgba(11, 29, 38, 1)), url(".././img/car-cover.webp")
+    background-size: cover
+    background-position: center
+
+.header-nav
+    ul
+        margin: 0 auto
+        li
+            padding: 0 40px            
+            a
+                color: variables.$text-color !important
+                font-weight: 600
+
+#header-ul
+    color: red    
+    
+    li
+        a:hover
+            border-bottom: 3px solid variables.$subt-color
+            
+.header-account
+    width: 10%
+    margin-right: 5% 
+    text-align: center   
+    a,i
+        color: variables.$text-color
+        padding: 0 5px
+
+.principal
+    display: flex
+    margin-top: 25vh
+
+    &-net
+        width: 15%
+        color: variables.$text-color
+        ul
+            text-align: left
+            li:first-child
+                writing-mode: vertical-lr
+            li
+                padding-bottom: 1rem
+
+                a
+                    color: variables.$text-color
+
+    &-title
+        width: 70%
+        padding-left: 10%   
+
+        h1
+            color: variables.$text-color
+            font-size: 3rem
+            margin-bottom: 1rem
+
+            @include components.mobile
+                font-size: 2rem    
+
+
+
+        span, i
+            color: variables.$text-color
+
+    &-dots
+        position: fixed
+        right: 0
+        color: variables.$text-color
+        width: 15%
+        text-align: end
+        padding-right: 2rem 
+        z-index: 5        
+
+        @include components.mobile
+            display: none
+        
+        ul
+                       
+            li
+                border-right: 3px solid rgba(255,255 ,255 ,.3 )
+                padding: 1.5rem
+                font-family: variables.$font-sub
+                margin: 1 auto
+                transition: 1s
+
+                a
+                    text-decoration: none
+                    color: variables.$text-color
+
+.destaque
+    border-right: 3px solid variables.$subt-color !important
+
+
+.line
+    p
+        color: variables.$subt-color
+
+//sections
+.section1
+    @include components.cards-text
+    opacity: 0
+    transition: opacity 2.5s  
+
+    .line
+        @include components.mobile
+            display: none    
+    
+    &-img
+        margin-top: -40px
+        width: 90%
+        background-image: url(".././img/car1.webp")
+        background-size: cover
+        background-position: center 
+
+        @include components.mobile
+            display: none
+
+.section1-text
+    margin-top: -100px
+
+.section2
+    @include components.cards-text
+    opacity: 0
+    transition: opacity 3.5s 
+
+    .line
+        @include components.mobile
+            display: none    
+    
+    &-img
+        width: 100%
+        background-image: url(".././img/car2.webp")
+        background-size: cover
+        background-position: center 
+        margin-right: 10%
+
+        @include components.mobile
+            display: none
+
+.section3
+    @include components.cards-text
+    opacity: 0
+    transition: opacity 3.5s   
+
+    .line
+        @include components.mobile
+            display: none  
+    
+    &-img
+        width: 90%
+        background-image: url(".././img/car3.webp")
+        background-size: cover
+        background-position: center
+
+        @include components.mobile
+            display: none 
+
+//Footer
+footer
+    @include components.mobile
+        height: fit-content
+        text-align: center
+        width: 100%
+        padding-top: 5rem
+
+    img
+        width: 100px
+        height: 80px
+        margin-bottom: 1rem
+        font-family: variables.$font-sub
+
+.company
+    width: 30%
+    @include components.mobile
+        width: 100%
+
+    p
+        font-family: variables.$font-sub
+        margin-bottom: 3rem
+
+    span
+        a
+            color: rgba(255,255 ,255 ,0.7 )
+
+.info
+    display: flex    
+    justify-content: end
+    position: absolute
+    right: 10%    
+
+    @include components.mobile
+        width: fit-content
+        height: fit-content    
+        position: sticky
+        margin-top: 2rem   
+
+    ul
+        width: fit-content
+        
+        
+        li
+            line-height: 3rem
+            a
+                font-family: variables.$font-sub
+                margin-bottom: 1rem
+                color: variables.$text-color
+                
+        
+        li:first-child
+            a
+                color: variables.$subt-color
+                margin-bottom: 1rem
+            
+
+.fade-in
+  opacity: 1
+
+         

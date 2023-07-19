@@ -1,0 +1,99 @@
+@use 'variables'
+
+//HR
+.line
+    height: 1rem
+    display: flex
+    align-items: center
+    margin-bottom: 1rem   
+    align-content: center
+    background-position: center
+
+    p
+        margin: 0
+        text-transform: uppercase
+        color: variables.$text-color
+        font-family: variables.$font-sub
+
+    hr
+        border-width: 2px
+        color: variables.$subt-color
+        width: 60px
+        border-style: solid 
+        margin-right: 1rem     
+        opacity: 1 !important     
+
+@mixin cards-text
+
+    @include mobile    
+        height: fit-content  
+
+    @include tablet
+        height: fit-content
+
+    &-text
+        position: relative       
+
+        &-cat
+            display: flex
+            position: relative
+
+            &-p
+                font-size: 14rem
+                font-weight: 700
+                font-family: variables.$font-sub
+                color: rgba(255,255 ,255 ,0.2 ) !important 
+                padding: 0 !important    
+
+            .number
+                position: absolute
+                left: 157px  
+                top: 40% 
+                // width: 100%                               
+
+                p
+                    color: variables.$subt-color
+                    padding: 0 !important
+
+        
+        &-h2      
+            position: absolute
+            top: 200px
+            padding: 0 10%
+            margin-bottom: 25rem
+
+            @include mobile
+                padding: 0 2%
+            
+
+            h2
+                font-size: 4rem
+                color: variables.$text-color
+                
+                @include mobile
+                    font-size: 2rem 
+
+        &-p
+            font-family: variables.$font-sub
+            padding: 0 10%
+            color: variables.$text-color
+            margin-top: 4rem
+            line-height: 3rem            
+            
+        
+        &-span
+            a
+                font-family: variables.$font-sub
+                padding: 0 10%
+                color: variables.$subt-color
+
+        &-i
+            color: variables.$subt-color
+
+@mixin mobile
+  @media (max-width: 700px)
+    @content
+
+@mixin tablet
+  @media (min-width: 700px) and (max-width: 1100px)
+    @content
